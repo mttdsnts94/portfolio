@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matteo De Santis — Portfolio</title>
+<meta name="description" content="Matteo De Santis — Visual & Product designer based in Rome. Selected work: banking app concept, brand refresh & UX/UI, illustrations.">
+<meta property="og:title" content="Matteo De Santis — Portfolio">
+<meta property="og:description" content="Visual & Product designer based in Rome.">
+<meta property="og:image" content="assets/solar-site.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;700;800&family=Space+Grotesk:wght@400;500&display=swap">
+<style>
+body{margin:0;background:#f7f7f7}
+html{scroll-behavior:smooth}
+a{color:#2356f5}a:hover{color:#1238b8}
+*{box-sizing:border-box}
+.site{--ink:#1e1e1e;--bg:#f7f7f7;--dark:#1d1d1b;--navy:#06081a;--mint:#e9faf9;--teal:#00a8c8;--sun:#3757e5;--cream:#fefeec;font-family:"Suisse Int'l","Inter Tight","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);min-height:100vh;overflow-x:clip;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1648px;margin:0 auto;padding:0 40px}
+.btn-reset{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(247,247,247,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(30,30,30,.06)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:14px 40px;max-width:1728px;margin:0 auto}
+.brand{font-weight:600;font-size:16px;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px;min-height:44px}
+.brand:hover{color:var(--ink)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--accent);display:inline-block;animation:pulse 2.4s ease-in-out infinite}
+.links{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.nlink{position:relative;font-size:16px;color:var(--ink);text-decoration:none;padding:12px 14px;border-radius:10px;min-height:44px;display:inline-flex;align-items:center;transition:background .25s}
+.nlink:hover{color:var(--ink);background:rgba(30,30,30,.05)}
+.nlink::after{content:"";position:absolute;left:14px;right:14px;bottom:8px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.7,0,.2,1)}
+.nlink.on::after,.nlink:hover::after{transform:scaleX(1)}
+.chip{display:inline-flex;align-items:center;gap:10px;font-size:16px;color:var(--accent);text-decoration:none;padding:14px 16px;border-radius:10px;background:#fff;box-shadow:0 0 0 1px rgba(35,86,245,.12);transition:transform .3s,box-shadow .3s}
+.chip:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(35,86,245,.18);color:var(--accent)}
+.chip.chip-sm{font-size:14px}
+.progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--accent);transform-origin:left;transform:scaleX(0);z-index:60}
+
+/* PAGE TRANSITIONS */
+.page{animation:pageIn .9s cubic-bezier(.2,.7,.1,1) both;padding-top:84px}
+@keyframes pageIn{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+.curtain-out{position:fixed;inset:0;z-index:80;background:var(--accent);transform-origin:top;animation:cOut .75s cubic-bezier(.7,0,.2,1) .05s both;pointer-events:none}
+@keyframes cOut{from{transform:scaleY(1)}to{transform:scaleY(0)}}
+.curtain-in{position:fixed;inset:0;z-index:80;background:var(--accent);transform-origin:bottom;animation:cIn .48s cubic-bezier(.7,0,.2,1) both}
+@keyframes cIn{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.6);opacity:.6}}
+
+/* HOME */
+.hero{font-weight:400;font-size:clamp(46px,6.75vw,116px);line-height:1.12;letter-spacing:-.02em;margin:0;padding:96px 0 0}
+.ln{display:block;overflow:hidden;padding-bottom:.06em}
+.ln>span{display:inline-block;animation:lineUp 1.1s cubic-bezier(.2,.8,.1,1) both}
+.ln:nth-child(1)>span{animation-delay:.25s}.ln:nth-child(2)>span{animation-delay:.38s}.ln:nth-child(3)>span{animation-delay:.51s}
+@keyframes lineUp{from{transform:translateY(110%)}to{transform:none}}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,954px);gap:40px;padding:120px 0 140px;align-items:end}
+.lead{font-size:clamp(24px,2.35vw,40px);line-height:1.15;margin:0;letter-spacing:-.01em}
+.scrollcue{width:56px;height:96px;border-radius:30px;border:1px solid rgba(30,30,30,.25);display:flex;justify-content:center;padding-top:16px;text-decoration:none;color:var(--ink)}
+.scrollcue svg{animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+.eyebrow{font-weight:600;font-size:16px;line-height:1.2;margin:0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding:0 0 32px;border-bottom:1px solid rgba(30,30,30,.15)}
+.sec-title{font-size:clamp(32px,3.5vw,56px);font-weight:400;margin:0;letter-spacing:-.02em}
+.count{font-size:16px;color:#555}
+.pcard{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;padding:48px 0;border-bottom:1px solid rgba(30,30,30,.15);color:var(--ink);text-decoration:none;align-items:center}
+.pcard:hover{color:var(--ink)}
+.pcard:nth-child(even){grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.pcard:nth-child(even) .pmedia{order:2}
+.pmedia{position:relative;aspect-ratio:16/10;border-radius:16px;overflow:hidden;background:#e7e7e7}
+.pmedia img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.1s cubic-bezier(.2,.7,.1,1)}
+.pcard:hover .pmedia img{transform:scale(1.05)}
+.pmedia.blue{background:#2356f5}.pmedia.blue img{object-fit:contain;padding:4% 8%}
+.pmedia.dark{background:var(--dark)}
+.pnum{font-size:16px;color:#555;margin:0 0 20px}
+.ptitle{font-size:clamp(32px,3.2vw,56px);line-height:1.05;letter-spacing:-.02em;margin:12px 0 24px;font-weight:400}
+.pdesc{font-size:clamp(17px,1.25vw,20px);line-height:1.4;margin:0 0 32px;color:#3a3a3a;max-width:560px}
+.more{display:inline-flex;align-items:center;gap:12px;font-size:16px;font-weight:600}
+.arrow{width:48px;height:48px;border-radius:50%;background:var(--ink);color:#fff;display:inline-flex;align-items:center;justify-content:center;transition:transform .45s cubic-bezier(.2,.7,.1,1),background .3s}
+.pcard:hover .arrow,.nextlink:hover .arrow{transform:translateX(8px) rotate(-45deg);background:var(--accent)}
+.about-teaser{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,954px);gap:40px;padding:120px 0 0}
+.thanks{padding-top:120px;padding-bottom:80px}
+.thanks h2{font-size:clamp(56px,7.6vw,116px);font-weight:400;letter-spacing:-.03em;margin:0 0 80px;line-height:1.1}
+.thanks-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,946px);gap:40px}
+.marq{overflow:hidden;border-top:1px solid rgba(30,30,30,.15);border-bottom:1px solid rgba(30,30,30,.15);padding:28px 0;white-space:nowrap}
+.marq-track{display:inline-flex;gap:48px;animation:marq 38s linear infinite;font-size:clamp(28px,3vw,48px);letter-spacing:-.01em}
+.marq-track span{display:inline-flex;align-items:center;gap:48px}
+.marq-track span::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--accent)}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* FOOTER */
+.foot{background:var(--dark);color:#fff;padding:96px 0 40px;margin-top:0}
+.foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:end}
+.foot h2{font-size:clamp(40px,5vw,80px);font-weight:400;letter-spacing:-.02em;margin:0 0 32px;line-height:1.05}
+.foot .chip{background:rgba(255,255,255,.08);color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.15)}
+.foot .chip:hover{color:#fff;background:var(--accent)}
+.foot-base{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:96px;padding-top:24px;border-top:1px solid rgba(255,255,255,.15);font-size:14px;color:#b9b9b6}
+.foot-base a{color:#fff}
+
+/* PROJECT HEADERS */
+.phead{color:#fff;padding:96px 0 72px}
+.phead.blue{background:#2356f5}.phead.dark{background:var(--dark)}
+.phead-grid{display:grid;grid-template-columns:minmax(0,536px) minmax(0,814px);justify-content:space-between;gap:40px}
+.phead h1{font-size:clamp(34px,3.4vw,56px);font-weight:400;line-height:1.08;letter-spacing:-.02em;margin:24px 0 0}
+.phead p{font-size:clamp(18px,1.45vw,24px);line-height:1.3;margin:0 0 1em}
+.back{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:14px;opacity:.85;margin-bottom:48px;min-height:44px}
+.back:hover{color:#fff;opacity:1}
+.htag{display:inline-block;animation:pageIn 1s .2s both}
+
+/* UNICREDIT */
+.feat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:40px;padding:56px 100px;min-height:640px}
+.feat.mint{background:var(--mint)}.feat.white{background:#fff}
+.feat.flip .ftext{order:2}
+.pills{display:flex;gap:16px;flex-wrap:wrap}
+.pill{background:var(--teal);color:#fff;font-weight:600;font-size:12px;letter-spacing:.02em;border-radius:8px;padding:11px 20px;display:inline-block;text-transform:none}
+.feat h2{font-size:clamp(30px,2.35vw,40px);font-weight:400;color:var(--navy);margin:19px 0 18px;letter-spacing:-.01em}
+.feat p{font-size:clamp(18px,1.4vw,24px);line-height:1.3;color:var(--navy);margin:0;max-width:710px;white-space:pre-line}
+.feat img{width:100%;height:auto;display:block}
+
+/* SOLAR */
+.shot{padding:40px 0}
+.shot-frame{border-radius:16px;overflow:hidden}
+.shot-frame img{width:100%;display:block}
+.black{background:#000;padding:96px 0 120px}
+.cap{color:#bdbdbd;font-size:14px;margin:0 0 16px;font-family:Inter,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.sm{max-width:1440px;margin:0 auto 96px;border-radius:16px;overflow:hidden;background:var(--navy);color:var(--cream);font-family:"Space Grotesk",Arial,sans-serif;position:relative}
+.sm-head{position:absolute;top:0;left:0;right:0;height:100px;display:flex;align-items:center;justify-content:space-between;padding:0 120px;z-index:3;gap:24px}
+.sm-menu{display:flex;gap:46px;font-size:14px;color:#fff}
+.sm-btns{display:flex;gap:20px}
+.sm-b{display:inline-flex;align-items:center;font-size:14px;color:#fff;padding:10px 16px;border-radius:12px;background:#3452ee}
+.sm-b.ghost{background:transparent;box-shadow:inset 0 0 0 1px rgba(254,254,236,.4)}
+.sm-hero{position:relative;height:clamp(560px,62vw,900px);overflow:hidden}
+.sm-hero video,.sm-hero .sm-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sm-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,8,26,.92) 0%,rgba(6,8,26,.55) 55%,rgba(6,8,26,.15) 100%)}
+.sm-grid{position:absolute;right:-20px;top:-80px;width:549px;height:549px;z-index:1;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:0;opacity:.55;-webkit-mask:radial-gradient(circle at 50% 50%,#000 0%,transparent 70%);mask:radial-gradient(circle at 50% 50%,#000 0%,transparent 70%)}
+.sm-grid i{margin:22%;border-radius:6px;background:#3757e5;animation:twinkle 3.2s ease-in-out infinite}
+.sm-grid i:nth-child(3n){animation-delay:.6s}.sm-grid i:nth-child(4n){animation-delay:1.2s}.sm-grid i:nth-child(5n){animation-delay:1.8s}
+@keyframes twinkle{0%,100%{opacity:.25}50%{opacity:1}}
+.sm-hero-in{position:absolute;inset:0;z-index:2;padding:200px 120px 120px;display:flex;flex-direction:column;justify-content:space-between}
+.sm-h1{font-size:clamp(44px,6.3vw,96px);line-height:1;letter-spacing:-.03em;font-weight:400;margin:0;max-width:996px}
+.sm-foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.sm-cta{display:inline-flex;align-items:center;gap:16px;background:var(--sun);color:#fff;border-radius:12px;padding:20px 28px;font-size:16px}
+.sm-partner{display:flex;align-items:center;gap:24px;font-family:Inter,Arial,sans-serif;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.sm-partner span+span{border-left:1px solid var(--cream);padding-left:24px;font-family:"Space Grotesk",Arial,sans-serif;font-weight:500;letter-spacing:.02em;text-transform:none;font-size:15px}
+.sm-sec{padding:80px 120px 100px;background:var(--navy)}
+.sm-sec-h{text-align:center;font-size:clamp(28px,2.5vw,36px);font-weight:400;margin:0 0 72px;position:relative;padding-top:24px}
+.sm-sec-h::before{content:"";position:absolute;top:0;left:50%;width:30px;height:3px;margin-left:-15px;background:var(--cream)}
+.sm-cards{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:24px}
+.sm-card{position:relative;height:470px;border-radius:12px;overflow:hidden;background:var(--sun)}
+.sm-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:luminosity;opacity:.85;transition:transform 1s cubic-bezier(.2,.7,.1,1),opacity .6s}
+.sm-card:hover img{transform:scale(1.06);opacity:1}
+.sm-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(55,87,229,0) 40%,rgba(6,8,26,.85) 100%)}
+.sm-tag{position:absolute;top:30px;left:30px;z-index:2;font-family:Inter,Arial,sans-serif;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;background:var(--cream);color:var(--navy);padding:8px 12px;border-radius:6px}
+.sm-card-t{position:absolute;left:40px;bottom:40px;right:40px;z-index:2;font-size:clamp(22px,2vw,30px);line-height:1.2;margin:0}
+.sm-prod-h{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin:0 0 60px}
+.sm-prod-h h3{font-size:clamp(28px,2.5vw,36px);font-weight:400;margin:0;position:relative;padding-top:24px}
+.sm-prod-h h3::before{content:"";position:absolute;top:0;left:0;width:30px;height:3px;background:var(--cream)}
+.sm-prods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.sm-prod{position:relative;height:550px;border-radius:12px;background:#0b0e26;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(254,254,236,.06)}
+.sm-prod .glow{position:absolute;left:50%;top:44%;width:240px;height:170px;margin:-85px 0 0 -120px;border-radius:50%;background:var(--sun);filter:blur(70px);opacity:.9;transition:transform .8s}
+.sm-prod img{position:absolute;left:50%;top:58px;width:232px;height:323px;margin-left:-116px;object-fit:contain;transition:transform .9s cubic-bezier(.2,.7,.1,1)}
+.sm-prod:hover img{transform:translateY(-12px) scale(1.04)}
+.sm-prod:hover .glow{transform:scale(1.3)}
+.sm-prod-n{position:absolute;left:30px;bottom:30px;font-size:32px;line-height:1.3}
+.sm-prod-k{position:absolute;left:30px;bottom:92px;font-family:Inter,Arial,sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.sm-index{height:4px;margin:56px auto 0;max-width:800px;background:rgba(255,255,255,.25);border-radius:4px;overflow:hidden}
+.sm-index i{display:block;height:100%;width:62%;background:#fff;border-radius:4px}
+
+/* ILLUSTRATIONS */
+.ill{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;padding:40px 0}
+.ill figure{margin:0;border-radius:16px;overflow:hidden;background:#efe3cf}
+.ill figure.wide{grid-column:1 / -1}
+.ill img{width:100%;display:block;transition:transform 1.1s cubic-bezier(.2,.7,.1,1)}
+.ill figure:hover img{transform:scale(1.04)}
+
+/* NEXT */
+.next{padding-top:80px;padding-bottom:120px}
+.nextlink{display:flex;justify-content:space-between;align-items:center;gap:24px;color:var(--ink);text-decoration:none;border-top:1px solid rgba(30,30,30,.15);padding-top:40px;flex-wrap:wrap}
+.nextlink:hover{color:var(--ink)}
+.nextlink .t{font-size:clamp(36px,5vw,80px);letter-spacing:-.02em;line-height:1.05;transition:transform .6s cubic-bezier(.2,.7,.1,1)}
+.nextlink:hover .t{transform:translateX(16px)}
+
+/* ABOUT */
+.ab-hero{padding-top:96px;padding-bottom:120px}
+.ab-hero .hero{padding:24px 0 0}
+.ab-profile{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,954px);gap:40px;padding:0 0 140px}
+.ab-profile p{font-size:clamp(22px,2vw,34px);line-height:1.22;margin:0 0 1em;letter-spacing:-.005em}
+.ab-comp{padding-top:120px;padding-bottom:120px}
+.comp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:56px}
+.comp{background:#fff;border-radius:16px;padding:32px;transition:transform .5s cubic-bezier(.2,.7,.1,1),box-shadow .5s}
+.comp:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(30,30,30,.08)}
+.comp-n{font-size:14px;color:var(--accent);font-weight:600;margin:0 0 40px}
+.comp h3{font-size:24px;font-weight:400;margin:0 0 24px;line-height:1.15;letter-spacing:-.01em}
+.comp ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.3;color:#3a3a3a}
+.comp li{padding-top:12px;border-top:1px solid rgba(30,30,30,.1)}
+.sectors{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.sector{border:1px solid rgba(30,30,30,.2);border-radius:999px;padding:12px 20px;font-size:16px}
+
+/* SCROLL-DRIVEN */
+@supports (animation-timeline: view()){
+  .rv{animation:rvIn linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+  @keyframes rvIn{from{opacity:0;transform:translateY(64px)}to{opacity:1;transform:none}}
+  .rv-l{animation:rvL linear both;animation-timeline:view();animation-range:entry 0% entry 80%}
+  @keyframes rvL{from{opacity:0;transform:translateX(-64px)}to{opacity:1;transform:none}}
+  .rv-s{animation:rvS linear both;animation-timeline:view();animation-range:entry 0% cover 40%}
+  @keyframes rvS{from{opacity:.2;transform:scale(.9);border-radius:48px}to{opacity:1;transform:none}}
+  .px{animation:px linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+  @keyframes px{from{transform:translateY(-6%) scale(1.12)}to{transform:translateY(6%) scale(1.12)}}
+  .progress{animation:grow linear both;animation-timeline:scroll(root)}
+  @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .curtain-in,.curtain-out{display:none}
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px){
+  .intro,.about-teaser,.thanks-grid,.ab-profile,.phead-grid{grid-template-columns:minmax(0,1fr)}
+  .pcard,.pcard:nth-child(even){grid-template-columns:minmax(0,1fr)}
+  .pcard:nth-child(even) .pmedia{order:0}
+  .feat{grid-template-columns:minmax(0,1fr);padding:56px 40px}
+  .feat.flip .ftext{order:0}
+  .comp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sm-head{padding:0 40px}.sm-menu{display:none}
+  .sm-hero-in{padding:150px 40px 48px}
+  .sm-sec{padding:64px 40px}
+  .sm-cards,.sm-prods{grid-template-columns:minmax(0,1fr)}
+  .sm-grid{display:none}
+  .hide-md{display:none}
+}
+@media (max-width: 640px){
+  .wrap,.nav-in{padding-left:16px;padding-right:16px}
+  .hide-sm{display:none}
+  .nlink{padding:12px 10px;font-size:15px}
+  .feat{padding:48px 16px;min-height:0}
+  .comp-grid,.ill{grid-template-columns:minmax(0,1fr)}
+  .sm-head{padding:0 16px}.sm-btns .ghost{display:none}
+  .sm-hero-in{padding:130px 16px 32px}
+  .sm-sec{padding:56px 16px}
+  .sm-card{height:360px}
+  .intro{padding:72px 0 96px}
+  .about-teaser{padding-top:72px}
+  .ab-comp{padding-top:96px;padding-bottom:96px}
+}
+
+[hidden]{display:none !important}
+</style>
+</head>
+<body>
+<div class="site" style="--accent: #2356f5">
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <nav class="nav-in" aria-label="Main">
+      <a class="brand" href="#home" data-nav="home"><span class="dot" aria-hidden="true"></span>Matteo De Santis</a>
+      <div class="links">
+        <a class="nlink" data-on="home" href="#home" data-nav="home">Home</a>
+        <a class="nlink" data-on="work" href="#work" data-nav="work">Work</a>
+        <a class="nlink" data-on="about" href="#about" data-nav="about">About</a>
+      </div>
+      <div class="links hide-md">
+        <a class="chip chip-sm" href="https://www.linkedin.com/in/matteo-de-santis-532b701a1" target="_blank" rel="noopener">linkedin.com/in/matteo-de-santis-532b701a1</a>
+        <a class="chip chip-sm" href="mailto:mttdsnts94@gmail.com">mttdsnts94@gmail.com</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="curtain-in" aria-hidden="true" hidden></div>
+
+  <!-- ============ HOME ============ -->
+  
+    <main class="page" id="home" data-page="home" hidden>
+      <div class="curtain-out" aria-hidden="true"></div>
+      <section class="wrap">
+        <h1 class="hero">
+          <span class="ln"><span>Hey, I’m Matteo.</span></span>
+          <span class="ln"><span>Visual &amp; Product designer</span></span>
+          <span class="ln"><span>based in Rome.</span></span>
+        </h1>
+        <div class="about-teaser">
+          <p class="eyebrow htag">Profile</p>
+          <div class="htag" style="animation-delay: .7s">
+            <p class="lead" style="margin-bottom: 40px">I’m a Visual and Lead Product Designer with 10+ years of experience, focused on crafting impactful, user-centered experiences across digital and physical products.</p>
+            <a class="more" href="#about" data-nav="about" style="color: #1e1e1e; text-decoration: none"><span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>More about me</a>
+          </div>
+        </div>
+        <div class="intro">
+          <a class="scrollcue" href="#work" data-nav="work" aria-label="Scroll to projects">
+            <svg width="20" height="44" viewBox="0 0 20 44" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10 2v38M2 32l8 8 8-8"></path></svg>
+          </a>
+          <p class="lead rv">Here a small part of my works. Unfortunately, most of the projects I have worked on are under NDA and so I will not be able to show them to you here :(</p>
+        </div>
+      </section>
+
+      <section class="wrap" id="work" style="scroll-margin-top: 90px">
+        <div class="sec-head rv">
+          <h2 class="sec-title">Selected work</h2>
+          <span class="count">03 projects</span>
+        </div>
+        <div>
+          <a class="pcard" href="#unicredit" data-nav="uc">
+            <div class="pmedia blue rv-s"><img class="px" src="assets/uc-1.png" alt="UniCredit concept app on a floating phone"></div>
+            <div class="rv">
+              <p class="pnum">01</p>
+              <p class="eyebrow">banking</p>
+              <h3 class="ptitle">Concept Project for Unicredit app</h3>
+              <p class="pdesc">An adaptive approach to banking, designed to support people through different life stages and evolving goals.</p>
+              <span class="more"><span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>View project</span>
+            </div>
+          </a>
+          <a class="pcard" href="#solar" data-nav="solar">
+            <div class="pmedia dark rv-s"><img class="px" src="assets/solar-site.jpg" alt="Brand refresh moodboard: product detail, typography, colour palette, simulator and icons"></div>
+            <div class="rv">
+              <p class="pnum">02</p>
+              <p class="eyebrow">Solar Panel Installation Company</p>
+              <h3 class="ptitle">Brand Refresh &amp; UX/UI</h3>
+              <p class="pdesc">Redefining the visual identity and optimizing the website’s user experience for a solar panel installation company.</p>
+              <span class="more"><span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>View project</span>
+            </div>
+          </a>
+          <a class="pcard" href="#illustrations" data-nav="ill">
+            <div class="pmedia rv-s"><img class="px" src="assets/ill-1.jpg" alt="Illustration: Decode complex ecosystems"></div>
+            <div class="rv">
+              <p class="pnum">03</p>
+              <p class="eyebrow">Service Design Medium web article</p>
+              <h3 class="ptitle">Illustrations</h3>
+              <p class="pdesc">Illustrations for a Service Design article, drawing inspiration from physics experiments to visually convey complex concepts.</p>
+              <span class="more"><span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>View project</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <div class="marq" aria-hidden="true" style="margin-top: 120px">
+        <div class="marq-track">
+          <span>Automotive</span><span>Banking</span><span>Technology</span><span>Retail</span><span>Transportation</span><span>Public Administration</span>
+          <span>Automotive</span><span>Banking</span><span>Technology</span><span>Retail</span><span>Transportation</span><span>Public Administration</span>
+        </div>
+      </div>
+
+      <section class="wrap thanks">
+        <h2 class="rv">Thank you</h2>
+        <div class="thanks-grid">
+          <div></div>
+          <p class="lead rv" style="color: #000000">All the projects showcased here are real, but for privacy reasons, I’ve removed logos and omitted company names. I’ve had the opportunity to work on many other exciting and prestigious projects, which I’d be happy to discuss in more detail.</p>
+        </div>
+      </section>
+    </main>
+  
+
+  <!-- ============ ABOUT ============ -->
+  
+    <main class="page" id="about" data-page="about" hidden>
+      <div class="curtain-out" aria-hidden="true"></div>
+      <section class="wrap ab-hero">
+        <p class="eyebrow htag">Profile</p>
+        <h1 class="hero">
+          <span class="ln"><span>Visual and Lead</span></span>
+          <span class="ln"><span>Product Designer with</span></span>
+          <span class="ln"><span>10+ years of experience.</span></span>
+        </h1>
+      </section>
+      <section class="wrap">
+        <div class="ab-profile">
+          <p class="eyebrow rv">About me</p>
+          <div>
+            <p class="rv">I’m a Visual and Lead Product Designer with 10+ years of experience, focused on crafting impactful, user-centered experiences across digital and physical products. I specialize in optimizing user journeys, creating scalable design systems, and translating business goals into intuitive and visually compelling solutions.</p>
+            <p class="rv">Over the years, I have worked across Automotive, Banking, Technology, Retail, Transportation, and Public Administration, collaborating with multidisciplinary teams to deliver products that combine usability, accessibility, performance, and strong visual identity.</p>
+            <p class="rv">My approach blends strategic thinking, creativity, and data-driven design to create experiences that generate measurable value for both users and businesses.</p>
+            <div class="sectors rv">
+              <span class="sector">Automotive</span><span class="sector">Banking</span><span class="sector">Technology</span><span class="sector">Retail</span><span class="sector">Transportation</span><span class="sector">Public Administration</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="marq" aria-hidden="true">
+        <div class="marq-track">
+          <span>Design Systems</span><span>Art Direction</span><span>User Research</span><span>Interaction Design</span><span>Brand Identity</span><span>Design Leadership</span>
+          <span>Design Systems</span><span>Art Direction</span><span>User Research</span><span>Interaction Design</span><span>Brand Identity</span><span>Design Leadership</span>
+        </div>
+      </div>
+      <section class="wrap ab-comp">
+        <div class="sec-head rv">
+          <h2 class="sec-title">Core Competencies</h2>
+          <span class="count">04 areas</span>
+        </div>
+        <div class="comp-grid">
+          <article class="comp rv">
+            <p class="comp-n">01</p>
+            <h3>Product Strategy &amp; Experience</h3>
+            <ul>
+              <li>Digital Product Vision &amp; Roadmapping</li>
+              <li>Product Strategy &amp; Experience Design</li>
+              <li>Customer Experience (CX) Design</li>
+              <li>Data-Driven Prioritisation &amp; Decision Making</li>
+              <li>User Research &amp; Insight Synthesis</li>
+              <li>Design Thinking &amp; Innovation Facilitation</li>
+            </ul>
+          </article>
+          <article class="comp rv">
+            <p class="comp-n">02</p>
+            <h3>UX &amp; Product Design</h3>
+            <ul>
+              <li>UX Design &amp; Interaction Design</li>
+              <li>Information Architecture</li>
+              <li>Wireframing &amp; Rapid Prototyping</li>
+              <li>Usability Testing &amp; Validation</li>
+              <li>Design Systems &amp; Component Libraries</li>
+              <li>Accessibility &amp; Inclusive Design</li>
+            </ul>
+          </article>
+          <article class="comp rv">
+            <p class="comp-n">03</p>
+            <h3>Visual Design &amp; Brand</h3>
+            <ul>
+              <li>Visual Design Direction</li>
+              <li>Art Direction</li>
+              <li>Brand Identity Systems</li>
+              <li>Visual Language Development</li>
+              <li>Creative Concept Development</li>
+              <li>Editorial &amp; Presentation Design</li>
+              <li>Data Visualization</li>
+            </ul>
+          </article>
+          <article class="comp rv">
+            <p class="comp-n">04</p>
+            <h3>Leadership &amp; Collaboration</h3>
+            <ul>
+              <li>Cross-Functional Stakeholder Management</li>
+              <li>Workshop Facilitation &amp; Co-Creation</li>
+              <li>Executive Communication</li>
+              <li>Agile &amp; Iterative Delivery</li>
+              <li>Global &amp; Regional Team Collaboration</li>
+              <li>Design Leadership &amp; Mentoring</li>
+              <li>Client Relationship Management</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="wrap next">
+        <a class="nextlink" href="#work" data-nav="work">
+          <span><span class="eyebrow" style="display: block; margin-bottom: 16px">See the work</span><span class="t">Selected projects</span></span>
+          <span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+        </a>
+      </section>
+    </main>
+  
+
+  <!-- ============ UNICREDIT ============ -->
+  
+    <main class="page" id="unicredit" data-page="unicredit" hidden style="padding-top: 0">
+      <div class="curtain-out" aria-hidden="true"></div>
+      <section class="phead blue" style="padding-top: 150px">
+        <div class="wrap">
+          <a class="back" href="#work" data-nav="work"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>All projects</a>
+          <div class="phead-grid">
+            <div class="htag">
+              <p class="eyebrow">banking</p>
+              <h1>Concept Project for Unicredit app</h1>
+            </div>
+            <div class="htag" style="animation-delay: .35s">
+              <p>This concept project explores an adaptive approach to banking, designed to support people through different life stages and evolving goals. Starting from the idea that money is not just an individual matter but also something shared within relationships, I crafted an experience that adapts both to personal needs and to those of the people users share their lives with.</p>
+              <p style="margin: 0">The screens were designed based on these pillars, with a strong focus on shifting interactions from a medium-term perspective to a hyper short-term one—favoring frequent, fast, and rewarding sessions that make the banking experience more dynamic, relevant, and seamlessly integrated into everyday life.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feat mint">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">Inactive app</span></div>
+          <h2>Unique access</h2>
+          <p>The app welcomes both the client who already has a bank account and the prospect who wants to start his experience or access to UniCredit products (es. Opening a bank account).</p>
+        </div>
+        <div class="rv-s"><img src="assets/uc-1.png" alt="Access screen: open a new bank account or log in"></div>
+      </section>
+      <section class="feat white flip">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">Active app</span></div>
+          <h2>Your today’s budget</h2>
+          <p>For general users, the main purpose of the app is to facilitate a maniacal control over the single daly expenses. This becomes seamless through the connections with other accounts and cards along with the increase of cash free transactions.</p>
+        </div>
+        <div class="rv-s"><img src="assets/uc-2.png" alt="Daily budget screen"></div>
+      </section>
+      <section class="feat mint">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">client</span></div>
+          <h2>My Bank area</h2>
+          <p>Customers can flow easily from the daly budget to the more core banking areas.
+How do your prefer to manage your account? Which are your most frequent actions? Are you going abroad? In your personal area you can have an overview of your finances, set up buckets, divide your accounts, monitor your investments etc.</p>
+        </div>
+        <div class="rv-s"><img src="assets/uc-3.png" alt="My Bank area screens"></div>
+      </section>
+      <section class="feat white flip">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">Active app</span></div>
+          <h2>Fast and contextual services</h2>
+          <p>The app enables one-click services that can even be triggered by proximity (es. to a branch, or to a shop). Fast features are different for prospects and clients.</p>
+        </div>
+        <div class="rv-s"><img src="assets/uc-4.png" alt="Fast contextual services screens"></div>
+      </section>
+      <section class="feat mint">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">client</span><span class="pill">prospect</span></div>
+          <h2>Your profile, your circles</h2>
+          <p>The profile page allows you to have an overview of your personal data, but also to manage your profile settings (es. Investment style, saving style), your communities, subscriptions and privacy consents in a ‘community like’ setting.</p>
+        </div>
+        <div class="rv-s"><img src="assets/uc-5.png" alt="Profile and circles screens"></div>
+      </section>
+
+      <section class="wrap next">
+        <a class="nextlink" href="#solar" data-nav="solar">
+          <span><span class="eyebrow" style="display: block; margin-bottom: 16px">Next project</span><span class="t">Brand Refresh &amp; UX/UI</span></span>
+          <span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+        </a>
+      </section>
+    </main>
+  
+
+  <!-- ============ SOLAR ============ -->
+  
+    <main class="page" id="solar" data-page="solar" hidden style="padding-top: 0">
+      <div class="curtain-out" aria-hidden="true"></div>
+      <section class="phead dark" style="padding-top: 150px">
+        <div class="wrap">
+          <a class="back" href="#work" data-nav="work"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>All projects</a>
+          <div class="phead-grid">
+            <div class="htag">
+              <p class="eyebrow">Solar Panel Installation Company</p>
+              <h1>Brand Refresh &amp; UX/UI</h1>
+            </div>
+            <div class="htag" style="animation-delay: .35s">
+              <p style="margin: 0">I worked on the brand refresh and UX/UI design for a solar panel installation company, redefining its visual identity and optimizing the website’s user experience. My work focused on creating a clean, modern design that enhances navigation and effectively communicates the company’s commitment to sustainable energy solutions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div style="background: #000000">
+        <section class="wrap shot">
+          <div class="shot-frame rv-s"><img src="assets/solar-site.jpg" alt="Brand refresh overview: product detail, products, typography, simulator, icons, colour palette"></div>
+        </section>
+      </div>
+
+      <section class="black">
+        <div class="wrap">
+          <p class="cap rv" style="max-width: 1440px; margin-left: auto; margin-right: auto">Homepage</p>
+          <figure class="sm rv-s" style="margin-top: 0" aria-label="Website homepage hero">
+            <div class="sm-head">
+              <span style="font-size: 18px; font-weight: 500; letter-spacing: -.01em">●●●●●</span>
+              <span class="sm-menu"><span>Company</span><span>Residenziale</span><span>Aziendale</span><span>Help Center</span></span>
+              <span class="sm-btns"><span class="sm-b">Accedi</span><span class="sm-b ghost">Registrati</span></span>
+            </div>
+            <div class="sm-hero">
+              <img class="sm-poster" src="assets/solar-hero.jpg" alt="">
+              <video src="assets/solar-hero.mp4" poster="assets/solar-hero.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+              <div class="sm-grid" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="sm-hero-in">
+                <h3 class="sm-h1">Benvenuti nel futuro dell'energia solare</h3>
+                <div class="sm-foot">
+                  <span class="sm-cta">Costruisci il tuo impianto <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+                  <span class="sm-partner"><span>Official partner</span><span>SunPower · Tesla · Daikin</span></span>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <p class="cap rv" style="max-width: 1440px; margin-left: auto; margin-right: auto">Offerta</p>
+          <figure class="sm rv-s" style="margin-top: 0" aria-label="Website offer section">
+            <div class="sm-sec">
+              <h3 class="sm-sec-h">Esplora la Nostra Offerta</h3>
+              <div class="sm-cards">
+                <div class="sm-card"><img src="assets/solar-card-1.jpg" alt="Solar panels on a house roof"><span class="sm-tag">Residenziale</span><p class="sm-card-t">Impianti Solari per la Tua Casa: Massimizza l'Efficienza Energetica!</p></div>
+                <div class="sm-card"><img src="assets/solar-card-2.jpg" alt="Solar plant for businesses"><span class="sm-tag">Azienda</span></div>
+                <div class="sm-card"><img src="assets/solar-card-3.jpg" alt="News and incentives"><span class="sm-tag">News &amp; Incentivi</span></div>
+              </div>
+            </div>
+          </figure>
+
+          <p class="cap rv" style="max-width: 1440px; margin-left: auto; margin-right: auto">Prodotti</p>
+          <figure class="sm rv-s" style="margin-top: 0; margin-bottom: 0" aria-label="Website products section">
+            <div class="sm-sec">
+              <div class="sm-prod-h">
+                <h3>Prodotti e soluzioni</h3>
+                <span class="sm-b">Scopri tutti i casi di successo</span>
+              </div>
+              <div class="sm-prods">
+                <div class="sm-prod"><span class="glow"></span><img src="assets/prod-1.png" alt="Maxeon solar panel"><span class="sm-prod-k">SunPower</span><span class="sm-prod-n">Maxeon</span></div>
+                <div class="sm-prod"><span class="glow"></span><img src="assets/prod-2.png" alt="PowerWall 2 home battery"><span class="sm-prod-k">Tesla</span><span class="sm-prod-n">PowerWall 2</span></div>
+                <div class="sm-prod"><span class="glow"></span><img src="assets/prod-3.png" alt="Altherma heat pump"><span class="sm-prod-k">Daikin</span><span class="sm-prod-n">Altherma</span></div>
+              </div>
+              <div class="sm-index" aria-hidden="true"><i></i></div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="wrap next">
+        <a class="nextlink" href="#illustrations" data-nav="ill">
+          <span><span class="eyebrow" style="display: block; margin-bottom: 16px">Next project</span><span class="t">Illustrations</span></span>
+          <span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+        </a>
+      </section>
+    </main>
+  
+
+  <!-- ============ ILLUSTRATIONS ============ -->
+  
+    <main class="page" id="illustrations" data-page="illustrations" hidden style="padding-top: 0">
+      <div class="curtain-out" aria-hidden="true"></div>
+      <section class="phead dark" style="padding-top: 150px">
+        <div class="wrap">
+          <a class="back" href="#work" data-nav="work"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>All projects</a>
+          <div class="phead-grid">
+            <div class="htag">
+              <p class="eyebrow">Service Design Medium web article</p>
+              <h1>Illustrations</h1>
+            </div>
+            <div class="htag" style="animation-delay: .35s">
+              <p style="margin: 0">I created illustrations for a Service Design article, drawing inspiration from physics experiments to visually convey complex concepts. My work focused on translating abstract ideas into clear and engaging visuals, enhancing the article’s accessibility and impact.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wrap ill">
+        <figure class="rv-s"><img src="assets/ill-1.jpg" alt="Illustration: Decode complex ecosystems"></figure>
+        <figure class="rv-s"><img src="assets/ill-2.jpg" alt="Service design article illustration 2"></figure>
+        <figure class="rv-s"><img src="assets/ill-3.jpg" alt="Service design article illustration 3"></figure>
+        <figure class="rv-s"><img src="assets/ill-4.jpg" alt="Service design article illustration 4"></figure>
+        <figure class="wide rv-s"><img src="assets/ill-5.jpg" alt="Service design article cover illustration"></figure>
+      </section>
+      <section class="wrap next">
+        <a class="nextlink" href="#unicredit" data-nav="uc">
+          <span><span class="eyebrow" style="display: block; margin-bottom: 16px">Next project</span><span class="t">Concept Project for Unicredit app</span></span>
+          <span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+        </a>
+      </section>
+    </main>
+  
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <p class="eyebrow" style="color: #b9b9b6; margin-bottom: 24px">Contacts</p>
+          <h2>Let’s talk.</h2>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap">
+            <a class="chip chip-sm" href="mailto:mttdsnts94@gmail.com">mttdsnts94@gmail.com</a>
+            <a class="chip chip-sm" href="https://www.linkedin.com/in/matteo-de-santis-532b701a1" target="_blank" rel="noopener">linkedin.com/in/matteo-de-santis-532b701a1</a>
+          </div>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap">
+          <a class="nlink" style="color: #ffffff" href="#home" data-nav="home">Home</a>
+          <a class="nlink" style="color: #ffffff" href="#work" data-nav="work">Work</a>
+          <a class="nlink" style="color: #ffffff" href="#about" data-nav="about">About</a>
+        </div>
+      </div>
+      <div class="foot-base">
+        <span>Matteo De Santis — Visual &amp; Product designer, Rome</span>
+        <a href="#home" data-nav="top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+(function () {
+  var routes = { home: 'home', about: 'about', uc: 'unicredit', solar: 'solar', ill: 'illustrations' };
+  var pages = document.querySelectorAll('[data-page]');
+  var curtain = document.querySelector('.curtain-in');
+  var current = null, busy = false;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function pageFromHash() {
+    var h = location.hash.replace(/^#\/?/, '');
+    if (h === 'work') return { page: 'home', anchor: 'work' };
+    for (var k in routes) if (routes[k] === h) return { page: routes[k] };
+    return { page: 'home' };
+  }
+  function setActive(page) {
+    var map = { home: page === 'home', work: ['unicredit', 'solar', 'illustrations'].indexOf(page) > -1, about: page === 'about' };
+    document.querySelectorAll('[data-on]').forEach(function (a) { a.classList.toggle('on', !!map[a.getAttribute('data-on')]); });
+  }
+  function scrollToAnchor(anchor, smooth) {
+    var el = anchor && document.getElementById(anchor);
+    if (el) el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    else window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+  }
+  function show(page, anchor) {
+    pages.forEach(function (p) { p.hidden = p.getAttribute('data-page') !== page; });
+    current = page;
+    setActive(page);
+    var titles = { home: 'Matteo De Santis — Portfolio', about: 'About — Matteo De Santis', unicredit: 'Concept Project for Unicredit app — Matteo De Santis', solar: 'Brand Refresh & UX/UI — Matteo De Santis', illustrations: 'Illustrations — Matteo De Santis' };
+    document.title = titles[page];
+    window.scrollTo(0, 0);
+    document.querySelectorAll('[data-page="' + page + '"] video').forEach(function (v) { v.muted = true; var p = v.play(); if (p && p.catch) p.catch(function () {}); });
+    if (anchor) setTimeout(function () { scrollToAnchor(anchor, true); }, reduce ? 0 : 650);
+  }
+  function go(route) {
+    var t = route.page;
+    if (t === current) { scrollToAnchor(route.anchor, true); return; }
+    if (busy) return;
+    if (reduce || current === null) { show(t, route.anchor); return; }
+    busy = true;
+    curtain.hidden = false;
+    setTimeout(function () { curtain.hidden = true; show(t, route.anchor); busy = false; }, 480);
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-nav]');
+    if (!a) return;
+    e.preventDefault();
+    var n = a.getAttribute('data-nav');
+    if (n === 'top') { scrollToAnchor(null, true); return; }
+    var hash = n === 'work' ? '#/work' : '#/' + routes[n];
+    if (location.hash === hash) go(pageFromHash());
+    else location.hash = hash;
+  });
+  window.addEventListener('hashchange', function () { go(pageFromHash()); });
+  go(pageFromHash());
+})();
+</script>
+</body>
+</html>
