@@ -19,7 +19,6 @@ a{color:#2356f5}a:hover{color:#1238b8}
 .site{--ink:#1e1e1e;--bg:#f7f7f7;--dark:#1d1d1b;--navy:#06081a;--mint:#e9faf9;--teal:#00a8c8;--sun:#3757e5;--cream:#fefeec;font-family:"Suisse Int'l","Inter Tight","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);min-height:100vh;overflow-x:clip;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1648px;margin:0 auto;padding:0 40px}
 .btn-reset{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
-
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(247,247,247,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(30,30,30,.06)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:14px 40px;max-width:1728px;margin:0 auto}
@@ -35,7 +34,6 @@ a{color:#2356f5}a:hover{color:#1238b8}
 .chip:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(35,86,245,.18);color:var(--accent)}
 .chip.chip-sm{font-size:14px}
 .progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--accent);transform-origin:left;transform:scaleX(0);z-index:60}
-
 /* PAGE TRANSITIONS */
 .page{animation:pageIn .9s cubic-bezier(.2,.7,.1,1) both;padding-top:84px}
 @keyframes pageIn{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
@@ -44,7 +42,6 @@ a{color:#2356f5}a:hover{color:#1238b8}
 .curtain-in{position:fixed;inset:0;z-index:80;background:var(--accent);transform-origin:bottom;animation:cIn .48s cubic-bezier(.7,0,.2,1) both}
 @keyframes cIn{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.6);opacity:.6}}
-
 /* HOME */
 .hero{font-weight:400;font-size:clamp(46px,6.75vw,116px);line-height:1.12;letter-spacing:-.02em;margin:0;padding:96px 0 0}
 .ln{display:block;overflow:hidden;padding-bottom:.06em}
@@ -84,7 +81,6 @@ a{color:#2356f5}a:hover{color:#1238b8}
 .marq-track span{display:inline-flex;align-items:center;gap:48px}
 .marq-track span::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--accent)}
 @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
 /* FOOTER */
 .foot{background:var(--dark);color:#fff;padding:96px 0 40px;margin-top:0}
 .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:end}
@@ -93,7 +89,6 @@ a{color:#2356f5}a:hover{color:#1238b8}
 .foot .chip:hover{color:#fff;background:var(--accent)}
 .foot-base{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:96px;padding-top:24px;border-top:1px solid rgba(255,255,255,.15);font-size:14px;color:#b9b9b6}
 .foot-base a{color:#fff}
-
 /* PROJECT HEADERS */
 .phead{color:#fff;padding:96px 0 72px}
 .phead.blue{background:#2356f5}.phead.dark{background:var(--dark)}
@@ -103,7 +98,6 @@ a{color:#2356f5}a:hover{color:#1238b8}
 .back{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:14px;opacity:.85;margin-bottom:48px;min-height:44px}
 .back:hover{color:#fff;opacity:1}
 .htag{display:inline-block;animation:pageIn 1s .2s both}
-
 /* UNICREDIT */
 .feat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:40px;padding:56px 100px;min-height:640px}
 .feat.mint{background:var(--mint)}.feat.white{background:#fff}
@@ -113,7 +107,6 @@ a{color:#2356f5}a:hover{color:#1238b8}
 .feat h2{font-size:clamp(30px,2.35vw,40px);font-weight:400;color:var(--navy);margin:19px 0 18px;letter-spacing:-.01em}
 .feat p{font-size:clamp(18px,1.4vw,24px);line-height:1.3;color:var(--navy);margin:0;max-width:710px;white-space:pre-line}
 .feat img{width:100%;height:auto;display:block}
-
 /* SOLAR */
 .shot{padding:40px 0}
 .shot-frame{border-radius:16px;overflow:hidden}
@@ -162,21 +155,18 @@ a{color:#2356f5}a:hover{color:#1238b8}
 .sm-prod-k{position:absolute;left:30px;bottom:92px;font-family:Inter,Arial,sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
 .sm-index{height:4px;margin:56px auto 0;max-width:800px;background:rgba(255,255,255,.25);border-radius:4px;overflow:hidden}
 .sm-index i{display:block;height:100%;width:62%;background:#fff;border-radius:4px}
-
 /* ILLUSTRATIONS */
 .ill{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;padding:40px 0}
 .ill figure{margin:0;border-radius:16px;overflow:hidden;background:#efe3cf}
 .ill figure.wide{grid-column:1 / -1}
 .ill img{width:100%;display:block;transition:transform 1.1s cubic-bezier(.2,.7,.1,1)}
 .ill figure:hover img{transform:scale(1.04)}
-
 /* NEXT */
 .next{padding-top:80px;padding-bottom:120px}
 .nextlink{display:flex;justify-content:space-between;align-items:center;gap:24px;color:var(--ink);text-decoration:none;border-top:1px solid rgba(30,30,30,.15);padding-top:40px;flex-wrap:wrap}
 .nextlink:hover{color:var(--ink)}
 .nextlink .t{font-size:clamp(36px,5vw,80px);letter-spacing:-.02em;line-height:1.05;transition:transform .6s cubic-bezier(.2,.7,.1,1)}
 .nextlink:hover .t{transform:translateX(16px)}
-
 /* ABOUT */
 .ab-hero{padding-top:96px;padding-bottom:120px}
 .ab-hero .hero{padding:24px 0 0}
@@ -192,7 +182,20 @@ a{color:#2356f5}a:hover{color:#1238b8}
 .comp li{padding-top:12px;border-top:1px solid rgba(30,30,30,.1)}
 .sectors{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
 .sector{border:1px solid rgba(30,30,30,.2);border-radius:999px;padding:12px 20px;font-size:16px}
-
+/* EXPERIENCE */
+.ab-exp{padding-top:120px;padding-bottom:40px}
+.xp{list-style:none;margin:56px 0 0;padding:0}
+.xp-row{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,4fr) minmax(0,5fr);gap:40px;padding:40px 0;border-top:1px solid rgba(30,30,30,.15);transition:background .4s}
+.xp-row:last-child{border-bottom:1px solid rgba(30,30,30,.15)}
+.xp-when{font-size:16px;color:#555;margin:0;line-height:1.4}
+.xp-now{display:inline-block;margin-left:10px;font-size:12px;font-weight:600;color:#fff;background:var(--accent);border-radius:999px;padding:3px 10px;vertical-align:1px}
+.xp-role{font-size:clamp(24px,2vw,32px);font-weight:400;letter-spacing:-.01em;line-height:1.15;margin:0 0 8px}
+.xp-co{font-size:16px;font-weight:600;margin:0}
+.xp-desc{font-size:clamp(16px,1.2vw,19px);line-height:1.45;color:#3a3a3a;margin:0}
+.xp-desc ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.xp-desc li{padding-left:22px;position:relative}
+.xp-desc li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:2px;background:var(--accent)}
+.xp-sub{color:#555;font-size:15px;margin:12px 0 0}
 /* SCROLL-DRIVEN */
 @supports (animation-timeline: view()){
   .rv{animation:rvIn linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
@@ -210,9 +213,10 @@ a{color:#2356f5}a:hover{color:#1238b8}
   *,*::before,*::after{animation:none !important;transition:none !important}
   .curtain-in,.curtain-out{display:none}
 }
-
 /* RESPONSIVE */
 @media (max-width: 1100px){
+  .xp-row{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px 40px}
+  .xp-desc{grid-column:2}
   .intro,.about-teaser,.thanks-grid,.ab-profile,.phead-grid{grid-template-columns:minmax(0,1fr)}
   .pcard,.pcard:nth-child(even){grid-template-columns:minmax(0,1fr)}
   .pcard:nth-child(even) .pmedia{order:0}
@@ -227,6 +231,9 @@ a{color:#2356f5}a:hover{color:#1238b8}
   .hide-md{display:none}
 }
 @media (max-width: 640px){
+  .xp-row{grid-template-columns:minmax(0,1fr);gap:12px;padding:32px 0}
+  .xp-desc{grid-column:auto}
+  .ab-exp{padding-top:96px}
   .wrap,.nav-in{padding-left:16px;padding-right:16px}
   .hide-sm{display:none}
   .nlink{padding:12px 10px;font-size:15px}
@@ -240,14 +247,12 @@ a{color:#2356f5}a:hover{color:#1238b8}
   .about-teaser{padding-top:72px}
   .ab-comp{padding-top:96px;padding-bottom:96px}
 }
-
 [hidden]{display:none !important}
 </style>
 </head>
 <body>
 <div class="site" style="--accent: #2356f5">
   <div class="progress" aria-hidden="true"></div>
-
   <header class="nav">
     <nav class="nav-in" aria-label="Main">
       <a class="brand" href="#home" data-nav="home"><span class="dot" aria-hidden="true"></span>Matteo De Santis</a>
@@ -262,11 +267,8 @@ a{color:#2356f5}a:hover{color:#1238b8}
       </div>
     </nav>
   </header>
-
   <div class="curtain-in" aria-hidden="true" hidden></div>
-
   <!-- ============ HOME ============ -->
-  
     <main class="page" id="home" data-page="home" hidden>
       <div class="curtain-out" aria-hidden="true"></div>
       <section class="wrap">
@@ -289,7 +291,6 @@ a{color:#2356f5}a:hover{color:#1238b8}
           <p class="lead rv">Here is a small part of my work. Unfortunately, most of the projects I have worked on are under NDA and so I will not be able to show them to you here :(</p>
         </div>
       </section>
-
       <section class="wrap" id="work" style="scroll-margin-top: 90px">
         <div class="sec-head rv">
           <h2 class="sec-title">Selected work</h2>
@@ -328,14 +329,12 @@ a{color:#2356f5}a:hover{color:#1238b8}
           </a>
         </div>
       </section>
-
       <div class="marq" aria-hidden="true" style="margin-top: 120px">
         <div class="marq-track">
           <span>Automotive</span><span>Banking</span><span>Technology</span><span>Retail</span><span>Transportation</span><span>Public Administration</span>
           <span>Automotive</span><span>Banking</span><span>Technology</span><span>Retail</span><span>Transportation</span><span>Public Administration</span>
         </div>
       </div>
-
       <section class="wrap thanks">
         <h2 class="rv">Thank you</h2>
         <div class="thanks-grid">
@@ -344,10 +343,7 @@ a{color:#2356f5}a:hover{color:#1238b8}
         </div>
       </section>
     </main>
-  
-
   <!-- ============ ABOUT ============ -->
-  
     <main class="page" id="about" data-page="about" hidden>
       <div class="curtain-out" aria-hidden="true"></div>
       <section class="wrap ab-hero">
@@ -377,6 +373,55 @@ a{color:#2356f5}a:hover{color:#1238b8}
           <span>Design Systems</span><span>Art Direction</span><span>User Research</span><span>Interaction Design</span><span>Brand Identity</span><span>Design Leadership</span>
         </div>
       </div>
+      <section class="wrap ab-exp">
+        <div class="sec-head rv">
+          <h2 class="sec-title">Work Experience</h2>
+          <span class="count">10+ years</span>
+        </div>
+        <ol class="xp">
+          <li class="xp-row rv">
+            <p class="xp-when">Jan 2026 — Present<span class="xp-now">Now</span></p>
+            <div><h3 class="xp-role">Senior Product Designer</h3><p class="xp-co">BIP Red · Full-time</p></div>
+            <div class="xp-desc"></div>
+          </li>
+          <li class="xp-row rv">
+            <p class="xp-when">May 2021 — Present<span class="xp-now">Now</span></p>
+            <div><h3 class="xp-role">Senior UX &amp; UI and Visual Designer</h3><p class="xp-co">Sketchin · Full-time</p></div>
+            <div class="xp-desc"><p style="margin: 0">Greater Rome Metropolitan Area</p></div>
+          </li>
+          <li class="xp-row rv">
+            <p class="xp-when">Sep 2022 — Present<span class="xp-now">Now</span></p>
+            <div><h3 class="xp-role">Professor &amp; Lecturer</h3><p class="xp-co">Istituto Europeo di Design</p></div>
+            <div class="xp-desc">
+              <ul>
+                <li>Lecturer at the Master in User Interface Design and AI (Sep 2024 — Present).</li>
+                <li>Professor of Project Methodology (Sep 2022 — Present), Rome.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="xp-row rv">
+            <p class="xp-when">Oct 2019 — May 2021</p>
+            <div><h3 class="xp-role">Senior Associate</h3><p class="xp-co">PwC Italy · Full-time</p></div>
+            <div class="xp-desc">
+              <ul>
+                <li>UX designer for the major grocery player in Italy.</li>
+                <li>UX &amp; UI designer for a major Italian bank in Milan.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="xp-row rv">
+            <p class="xp-when">Sep 2016 — Oct 2019</p>
+            <div><h3 class="xp-role">Associate</h3><p class="xp-co">PwC Italy · Full-time</p></div>
+            <div class="xp-desc">
+              <ul>
+                <li>Redesigned the website of a national retailer, focusing on User Experience and User Interface.</li>
+                <li>In the public sector, designed the HR personnel management tool and operational dashboards to monitor the quality of the IT office.</li>
+                <li>Designed the main iOS and Android apps for national transportation and energy distribution players.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
       <section class="wrap ab-comp">
         <div class="sec-head rv">
           <h2 class="sec-title">Core Competencies</h2>
@@ -442,10 +487,7 @@ a{color:#2356f5}a:hover{color:#1238b8}
         </a>
       </section>
     </main>
-  
-
   <!-- ============ UNICREDIT ============ -->
-  
     <main class="page" id="unicredit" data-page="unicredit" hidden style="padding-top: 0">
       <div class="curtain-out" aria-hidden="true"></div>
       <section class="phead blue" style="padding-top: 150px">
@@ -463,7 +505,6 @@ a{color:#2356f5}a:hover{color:#1238b8}
           </div>
         </div>
       </section>
-
       <section class="feat mint">
         <div class="ftext rv-l">
           <div class="pills"><span class="pill">Inactive app</span></div>
@@ -505,7 +546,6 @@ How do you prefer to manage your account? Which are your most frequent actions? 
         </div>
         <div class="rv-s"><img src="uc-5.png" alt="Profile and circles screens"></div>
       </section>
-
       <section class="wrap next">
         <a class="nextlink" href="#solar" data-nav="solar">
           <span><span class="eyebrow" style="display: block; margin-bottom: 16px">Next project</span><span class="t">Brand Refresh &amp; UX/UI</span></span>
@@ -513,10 +553,7 @@ How do you prefer to manage your account? Which are your most frequent actions? 
         </a>
       </section>
     </main>
-  
-
   <!-- ============ SOLAR ============ -->
-  
     <main class="page" id="solar" data-page="solar" hidden style="padding-top: 0">
       <div class="curtain-out" aria-hidden="true"></div>
       <section class="phead dark" style="padding-top: 150px">
@@ -538,7 +575,6 @@ How do you prefer to manage your account? Which are your most frequent actions? 
           <div class="shot-frame rv-s"><img src="solar-site.jpg" alt="Brand refresh overview: product detail, products, typography, simulator, icons, colour palette"></div>
         </section>
       </div>
-
       <section class="black">
         <div class="wrap">
           <p class="cap rv" style="max-width: 1440px; margin-left: auto; margin-right: auto">Homepage</p>
@@ -558,12 +594,10 @@ How do you prefer to manage your account? Which are your most frequent actions? 
                 <h3 class="sm-h1">Benvenuti nel futuro dell'energia solare</h3>
                 <div class="sm-foot">
                   <span class="sm-cta">Costruisci il tuo impianto <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-                  
                 </div>
               </div>
             </div>
           </figure>
-
           <p class="cap rv" style="max-width: 1440px; margin-left: auto; margin-right: auto">Offerta</p>
           <figure class="sm rv-s" style="margin-top: 0" aria-label="Website offer section">
             <div class="sm-sec">
@@ -575,7 +609,6 @@ How do you prefer to manage your account? Which are your most frequent actions? 
               </div>
             </div>
           </figure>
-
           <p class="cap rv" style="max-width: 1440px; margin-left: auto; margin-right: auto">Prodotti</p>
           <figure class="sm rv-s" style="margin-top: 0; margin-bottom: 0" aria-label="Website products section">
             <div class="sm-sec">
@@ -593,7 +626,6 @@ How do you prefer to manage your account? Which are your most frequent actions? 
           </figure>
         </div>
       </section>
-
       <section class="wrap next">
         <a class="nextlink" href="#illustrations" data-nav="ill">
           <span><span class="eyebrow" style="display: block; margin-bottom: 16px">Next project</span><span class="t">Illustrations</span></span>
@@ -601,10 +633,7 @@ How do you prefer to manage your account? Which are your most frequent actions? 
         </a>
       </section>
     </main>
-  
-
   <!-- ============ ILLUSTRATIONS ============ -->
-  
     <main class="page" id="illustrations" data-page="illustrations" hidden style="padding-top: 0">
       <div class="curtain-out" aria-hidden="true"></div>
       <section class="phead dark" style="padding-top: 150px">
@@ -635,8 +664,6 @@ How do you prefer to manage your account? Which are your most frequent actions? 
         </a>
       </section>
     </main>
-  
-
   <!-- ============ FOOTER ============ -->
   <footer class="foot">
     <div class="wrap">
@@ -669,7 +696,6 @@ How do you prefer to manage your account? Which are your most frequent actions? 
   var curtain = document.querySelector('.curtain-in');
   var current = null, busy = false;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   function pageFromHash() {
     var h = location.hash.replace(/^#\/?/, '');
     if (h === 'work') return { page: 'home', anchor: 'work' };
@@ -704,7 +730,6 @@ How do you prefer to manage your account? Which are your most frequent actions? 
     curtain.hidden = false;
     setTimeout(function () { curtain.hidden = true; show(t, route.anchor); busy = false; }, 480);
   }
-
   document.addEventListener('click', function (e) {
     var a = e.target.closest('[data-nav]');
     if (!a) return;
