@@ -10,7 +10,7 @@
 <meta property="og:image" content="solar-site.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;700;800&family=Space+Grotesk:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;700;800&family=Space+Grotesk:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap">
 <style>
 body{margin:0;background:#f7f7f7}
 html{scroll-behavior:smooth}
@@ -155,6 +155,92 @@ a{color:#2356f5}a:hover{color:#1238b8}
 .sm-prod-k{position:absolute;left:30px;bottom:92px;font-family:Inter,Arial,sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
 .sm-index{height:4px;margin:56px auto 0;max-width:800px;background:rgba(255,255,255,.25);border-radius:4px;overflow:hidden}
 .sm-index i{display:block;height:100%;width:62%;background:#fff;border-radius:4px}
+/* YOUHEALTHY */
+.yh{--yn:#080923;--yc:#fff8e6;--yy:#fabc00;--yg:#00cd9c;--ym:#e6faf5;--yb:#20248d}
+.phead.yh-head{background:#080923;color:#fff8e6}
+.yh-roles{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.yh-role{border:1px solid rgba(255,248,230,.35);border-radius:999px;padding:10px 18px;font-size:14px}
+.yh-cover{background:var(--yc);padding:72px 0 40px}
+.yh-cover img{display:block;width:100%;max-width:1200px;margin:0 auto}
+.yh .feat.mint{background:var(--ym)}.yh .feat.cream{background:var(--yc)}.yh .feat.white{background:#fff}
+.yh .pill{background:var(--yn);color:var(--yc)}
+.yh .feat .ftext h2,.yh .feat .ftext p{color:var(--yn)}
+.feat .ps p{white-space:normal;max-width:none;color:inherit}
+.feat .bw p{white-space:normal}
+.yh-vis{display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap}
+/* phone frame */
+.ph{width:270px;flex:0 0 auto;aspect-ratio:390/844;border-radius:42px;background:#0d0d10;padding:9px;box-shadow:0 30px 60px rgba(8,9,35,.22),inset 0 0 0 2px #2a2a30;position:relative;transition:transform .7s cubic-bezier(.2,.7,.1,1)}
+.ph:nth-child(2){transform:translateY(-28px)}
+.yh-vis:hover .ph{transform:translateY(-8px)}.yh-vis:hover .ph:nth-child(2){transform:translateY(-36px)}
+.ph::before{content:"";position:absolute;top:17px;left:50%;width:76px;height:20px;margin-left:-38px;border-radius:12px;background:#0d0d10;z-index:3}
+.ps{position:relative;height:100%;border-radius:34px;overflow:hidden;background:#fff;color:var(--yn);font-family:Poppins,Arial,sans-serif;display:flex;flex-direction:column;padding:46px 18px 18px}
+.ps.dark{background:var(--yn);color:var(--yc)}.ps.mint{background:var(--ym)}
+.ps .k{font-size:9px;font-weight:700;margin:0 0 8px}
+.ps .h{font-size:20px;font-weight:500;line-height:1.15;margin:0 0 10px;letter-spacing:-.01em}
+.ps .b{font-size:9.5px;line-height:1.45;margin:0}
+.ps .sp{flex:1}
+.ps .btn{display:block;text-align:center;border-radius:10px;padding:11px;font-size:10.5px;font-weight:600;background:var(--yn);color:var(--yc)}
+.ps.dark .btn{background:var(--yc);color:var(--yn)}
+.ps .btn.y{background:var(--yy);color:var(--yn)}
+.ps .btn.ghost{background:transparent;color:var(--yn);box-shadow:inset 0 0 0 1.5px var(--yn)}
+.ps .row{display:flex;gap:8px}.ps .row .btn{flex:1}
+.ps .photo{position:absolute;left:0;right:0;top:0;height:52%;object-fit:cover;width:100%}
+.ps .dots{display:flex;gap:5px;margin:14px 0}.ps .dots i{width:6px;height:6px;border-radius:6px;background:rgba(255,248,230,.35)}.ps .dots i.on{width:18px;background:var(--yy)}
+.ps .field{border:1.5px solid rgba(8,9,35,.18);border-radius:10px;padding:10px 12px;font-size:9.5px;margin-bottom:8px;color:rgba(8,9,35,.55)}
+.ps .field.f{color:var(--yn);border-color:var(--yn)}
+.ps .opt{border:1.5px solid rgba(8,9,35,.15);border-radius:12px;padding:12px;font-size:10px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.ps .opt::after{content:"";width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(8,9,35,.35)}
+.ps .opt.on{border-color:var(--yg);background:rgba(0,205,156,.08);font-weight:700}.ps .opt.on::after{background:var(--yg);box-shadow:inset 0 0 0 3px #fff,0 0 0 1.5px var(--yg)}
+.ps .prog{height:4px;border-radius:4px;background:rgba(8,9,35,.1);margin:0 0 16px;overflow:hidden}.ps .prog i{display:block;height:100%;background:var(--yg);border-radius:4px}
+.ps .card{background:#fff;border-radius:16px;padding:14px;box-shadow:0 6px 20px rgba(8,9,35,.08);margin-bottom:12px}
+.ps .who{display:flex;gap:10px;align-items:center;margin:10px 0}
+.ps .who img{width:40px;height:40px;border-radius:12px;object-fit:cover}
+.ps .tag{font-size:8px;font-weight:700;color:var(--yg);letter-spacing:.06em;text-transform:uppercase}
+.ps .stepper{display:flex;gap:6px;margin:12px 0}.ps .stepper span{flex:1;border-radius:8px;padding:8px 6px;font-size:8px;text-align:center;background:rgba(8,9,35,.08)}.ps .stepper span.on{background:var(--yn);color:var(--yc);font-weight:700}
+.ps .video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ps .pip{position:absolute;top:44px;right:14px;width:70px;height:100px;border-radius:12px;background:linear-gradient(160deg,#20248d,#00cd9c);box-shadow:0 0 0 2px #fff}
+.ps .timer{position:absolute;top:46px;left:14px;background:#fff;border-radius:999px;padding:5px 10px;font-size:9px;font-weight:700}
+.ps .callbar{position:absolute;left:0;right:0;bottom:20px;display:flex;justify-content:center;gap:14px}
+.ps .callbar i{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.9)}.ps .callbar i.end{background:#e5484d}
+.ps .slider{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--yg) 62%,rgba(8,9,35,.12) 62%);position:relative;margin:18px 0 6px}
+.ps .slider::after{content:"";position:absolute;left:62%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:#fff;box-shadow:0 0 0 2px var(--yg)}
+.ps .goal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ps .goal span{border-radius:12px;padding:12px 10px;font-size:9.5px;font-weight:600;background:rgba(8,9,35,.06)}.ps .goal span.on{background:var(--yy)}
+/* browser frame */
+.bw{width:100%;max-width:640px;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 30px 60px rgba(8,9,35,.18);font-family:Poppins,Arial,sans-serif;color:var(--yn)}
+.bw-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#f1efe9}
+.bw-bar i{width:9px;height:9px;border-radius:50%;background:#d5d1c6}
+.bw-bar span{margin-left:12px;flex:1;background:#fff;border-radius:6px;font-size:10px;padding:4px 10px;color:#777}
+.bw-body{position:relative;background:var(--yc);padding:28px 32px;min-height:340px;overflow:hidden}
+.bw-nav{display:flex;justify-content:space-between;align-items:center;font-size:10px;margin-bottom:34px}
+.bw h4{font-size:30px;font-weight:600;line-height:1.08;margin:0 0 14px;max-width:300px;letter-spacing:-.02em}
+.bw p{font-size:11px;line-height:1.5;margin:0 0 18px;max-width:280px}
+.bw .btn{display:inline-block;border-radius:10px;padding:10px 16px;font-size:10.5px;font-weight:600;background:var(--yn);color:var(--yc)}
+.bw img.bw-person{position:absolute;right:10px;bottom:0;height:92%;width:auto}
+.bw-blob{position:absolute;right:-60px;top:40px;width:300px;height:300px;border-radius:50%;background:var(--yy);opacity:.9}
+.bw-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}
+.bw-steps div{background:#fff;border-radius:14px;padding:14px}
+.bw-steps .tag{font-size:9px;font-weight:700;color:var(--yg);margin:0 0 6px;display:block}
+.bw-steps p{font-size:10.5px;margin:0;line-height:1.4}
+.bw-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+.bw-form span{background:#fff;border-radius:10px;padding:11px 12px;font-size:10px;color:rgba(8,9,35,.55)}
+/* brand board */
+.yh-brand{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;width:100%;max-width:640px}
+.yh-brand > div{border-radius:16px;padding:18px;font-family:Poppins,Arial,sans-serif;min-height:120px;display:flex;flex-direction:column;justify-content:space-between}
+.br-logo{grid-column:span 4;background:var(--yn);color:var(--yc)}
+.yh-brand img.yh-wm{display:block;width:100%;max-width:300px;height:auto}
+.bw img.bw-logo{width:auto;height:24px;display:block}
+.feat .ps img.yh-ph-logo{width:120px;height:auto;display:block}
+.br-logo small{font-size:12px;font-weight:300;letter-spacing:.02em}
+.br-type{grid-column:span 2;background:#fff;color:var(--yn)}
+.br-type .aa{font-size:56px;font-weight:600;line-height:1;letter-spacing:-.03em}
+.br-type small,.br-sw small{font-size:11px;font-weight:600}
+.br-sw{grid-column:span 2;min-height:96px !important}
+.br-sw span{font-size:10px;opacity:.75;font-weight:400}
+
+.yh-vis.three .ph{zoom:.64}
+.yh-vis.three{gap:16px}
+
 /* ILLUSTRATIONS */
 .ill{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;padding:40px 0}
 .ill figure{margin:0;border-radius:16px;overflow:hidden;background:#efe3cf}
@@ -215,6 +301,7 @@ a{color:#2356f5}a:hover{color:#1238b8}
 }
 /* RESPONSIVE */
 @media (max-width: 1100px){
+  .yh-brand,.bw{max-width:none}
   .xp-row{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px 40px}
   .xp-desc{grid-column:2}
   .intro,.about-teaser,.thanks-grid,.ab-profile,.phead-grid{grid-template-columns:minmax(0,1fr)}
@@ -231,6 +318,12 @@ a{color:#2356f5}a:hover{color:#1238b8}
   .hide-md{display:none}
 }
 @media (max-width: 640px){
+  .yh-vis.three{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;padding:36px 4px 16px;margin:0 -16px;scroll-snap-type:x mandatory}
+  .yh-vis.three .ph{zoom:.6;scroll-snap-align:center}
+  .yh-brand{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .br-logo,.br-type{grid-column:span 2}.br-sw{grid-column:span 1}
+  .bw-body{padding:20px}.bw h4{font-size:22px}.bw-person{opacity:.35}
+  .bw-steps,.bw-form{grid-template-columns:minmax(0,1fr)}
   .xp-row{grid-template-columns:minmax(0,1fr);gap:12px;padding:32px 0}
   .xp-desc{grid-column:auto}
   .ab-exp{padding-top:96px}
@@ -294,13 +387,23 @@ a{color:#2356f5}a:hover{color:#1238b8}
       <section class="wrap" id="work" style="scroll-margin-top: 90px">
         <div class="sec-head rv">
           <h2 class="sec-title">Selected work</h2>
-          <span class="count">03 projects</span>
+          <span class="count">04 projects</span>
         </div>
         <div>
+          <a class="pcard" href="#youhealthy" data-nav="yh">
+            <div class="pmedia rv-s" style="background: #fff8e6"><img class="px" src="yh-mockup.png" alt="YouHealthy app shown on two phones" style="object-fit: contain"></div>
+            <div class="rv">
+              <p class="pnum">01</p>
+              <p class="eyebrow">Digital health · Brand identity, website &amp; app</p>
+              <h3 class="ptitle">YouHealthy</h3>
+              <p class="pdesc">Brand identity, website and mobile app for a digital health service that puts people at the centre of their own care.</p>
+              <span class="more"><span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>View project</span>
+            </div>
+          </a>
           <a class="pcard" href="#unicredit" data-nav="uc">
             <div class="pmedia blue rv-s"><img class="px" src="uc-1.png" alt="UniCredit concept app on a floating phone"></div>
             <div class="rv">
-              <p class="pnum">01</p>
+              <p class="pnum">02</p>
               <p class="eyebrow">banking</p>
               <h3 class="ptitle">Concept Project for Unicredit app</h3>
               <p class="pdesc">An adaptive approach to banking, designed to support people through different life stages and evolving goals.</p>
@@ -310,7 +413,7 @@ a{color:#2356f5}a:hover{color:#1238b8}
           <a class="pcard" href="#solar" data-nav="solar">
             <div class="pmedia dark rv-s"><img class="px" src="solar-site.jpg" alt="Brand refresh moodboard: product detail, typography, colour palette, simulator and icons"></div>
             <div class="rv">
-              <p class="pnum">02</p>
+              <p class="pnum">03</p>
               <p class="eyebrow">Solar Panel Installation Company</p>
               <h3 class="ptitle">Brand Refresh &amp; UX/UI</h3>
               <p class="pdesc">Redefining the visual identity and optimizing the website’s user experience for a solar panel installation company.</p>
@@ -320,7 +423,7 @@ a{color:#2356f5}a:hover{color:#1238b8}
           <a class="pcard" href="#illustrations" data-nav="ill">
             <div class="pmedia rv-s"><img class="px" src="ill-1.jpg" alt="Illustration: Decode complex ecosystems"></div>
             <div class="rv">
-              <p class="pnum">03</p>
+              <p class="pnum">04</p>
               <p class="eyebrow">Service Design Medium web article</p>
               <h3 class="ptitle">Illustrations</h3>
               <p class="pdesc">Illustrations for a Service Design article, drawing inspiration from physics experiments to visually convey complex concepts.</p>
@@ -658,6 +761,218 @@ How do you prefer to manage your account? Which are your most frequent actions? 
         <figure class="wide rv-s"><img src="ill-5.jpg" alt="Service design article cover illustration"></figure>
       </section>
       <section class="wrap next">
+        <a class="nextlink" href="#youhealthy" data-nav="yh">
+          <span><span class="eyebrow" style="display: block; margin-bottom: 16px">Next project</span><span class="t">YouHealthy</span></span>
+          <span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+        </a>
+      </section>
+    </main>
+
+  <!-- ============ YOUHEALTHY ============ -->
+    <main class="page yh" id="youhealthy" data-page="youhealthy" hidden style="padding-top: 0">
+      <div class="curtain-out" aria-hidden="true"></div>
+      <section class="phead yh-head" style="padding-top: 150px">
+        <div class="wrap">
+          <a class="back" href="#work" data-nav="work" style="color: #fff8e6"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>All projects</a>
+          <div class="phead-grid">
+            <div class="htag">
+              <p class="eyebrow">Digital health · Brand identity, website &amp; app</p>
+              <h1>YouHealthy</h1>
+              <div class="yh-roles"><span class="yh-role">Brand identity</span><span class="yh-role">Website</span><span class="yh-role">Mobile app</span></div>
+            </div>
+            <div class="htag" style="animation-delay: .35s">
+              <p>YouHealthy is a digital health service built around one idea: putting people at the centre of their own health, with a single access point to doctors, health assistants and specialists.</p>
+              <p>I designed it end to end — the brand identity, the website and the mobile app — following the whole acquisition journey: from the first visit to the website, to a free consultation with an expert, to onboarding and personal health profiling in the app.</p>
+              <p style="margin: 0; font-size: 15px; opacity: .7">The designs shown reflect the version I delivered; the live product has evolved since.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="yh-cover">
+        <div class="wrap"><img class="rv-s" src="yh-mockup.png" alt="YouHealthy app welcome screens on two phones"></div>
+      </section>
+
+      <section class="feat mint">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">Brand identity</span></div>
+          <h2>Simply feeling good</h2>
+          <p>A warm, human identity for a sector that often feels cold and bureaucratic. A deep navy for trust, a soft cream base, and bright yellow and green accents for energy and wellbeing, paired with Poppins for a friendly, accessible voice.</p>
+        </div>
+        <div class="rv-s" style="display: flex; justify-content: center">
+          <div class="yh-brand" aria-label="YouHealthy brand elements: logo, typeface and colour palette" role="img">
+            <div class="br-logo"><small>Brand</small><img class="yh-wm" src="yh-logo-cream.svg" alt="YouHealthy logo"><small>Semplice star bene</small></div>
+            <div class="br-type"><small>Typeface</small><span class="aa">Aa</span><small>Poppins</small></div>
+            <div class="br-sw" style="background: #080923; color: #fff8e6"><small>Navy</small><span>#080923</span></div>
+            <div class="br-sw" style="background: #fff8e6; color: #080923; box-shadow: inset 0 0 0 1px rgba(8,9,35,.1)"><small>Cream</small><span>#FFF8E6</span></div>
+            <div class="br-sw" style="background: #fabc00; color: #080923"><small>Yellow</small><span>#FABC00</span></div>
+            <div class="br-sw" style="background: #00cd9c; color: #080923"><small>Green</small><span>#00CD9C</span></div>
+            <div class="br-sw" style="background: #e6faf5; color: #080923; box-shadow: inset 0 0 0 1px rgba(8,9,35,.1)"><small>Mint</small><span>#E6FAF5</span></div>
+            <div class="br-sw" style="background: #20248d; color: #fff8e6"><small>Blue</small><span>#20248D</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feat white flip">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">Website</span></div>
+          <h2>You at the centre of your health</h2>
+          <p>The website introduces the ecosystem of services — general and specialist consultations, daily prevention, psychological and nutritional wellbeing — and guides people towards one clear action: getting in touch with an expert.</p>
+        </div>
+        <div class="rv-s" style="display: flex; justify-content: center">
+          <div class="bw" role="img" aria-label="YouHealthy website homepage">
+            <div class="bw-bar"><i></i><i></i><i></i><span>youhealthy</span></div>
+            <div class="bw-body">
+              <div class="bw-blob"></div>
+              <img class="bw-person" src="yh-person.png" alt="">
+              <div style="position: relative">
+                <div class="bw-nav"><img class="bw-logo" src="yh-logo-navy.svg" alt="YouHealthy"><span>Assistenza</span></div>
+                <h4>Ciao, noi siamo Youhealthy</h4>
+                <p>Siamo impegnati a rivoluzionare il concetto di cura mettendo le persone al centro della propria salute.</p>
+                <span class="btn">Entra in Youhealthy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feat cream">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">Website</span><span class="pill">Free consultation</span></div>
+          <h2>A free consultation, in three steps</h2>
+          <p>Health is personal, so the journey starts by listening. People create their credentials and book a slot, download the app to confirm it, then talk to an expert who suggests the most suitable path.</p>
+        </div>
+        <div class="rv-s" style="display: flex; justify-content: center">
+          <div class="bw" role="img" aria-label="Booking a free consultation on the YouHealthy website">
+            <div class="bw-bar"><i></i><i></i><i></i><span>youhealthy / prenota</span></div>
+            <div class="bw-body" style="background: #ffffff">
+              <h4 style="font-size: 26px; max-width: none">Prenota un appuntamento</h4>
+              <p style="max-width: 420px">Inserisci i dati richiesti, troverai i dettagli del tuo appuntamento gratuito all’interno dell’App dopo averla scaricata.</p>
+              <div class="bw-steps" style="margin-bottom: 4px">
+                <div style="background: #e6faf5"><span class="tag">Step 01</span><p>Crea le tue credenziali e fissa un appuntamento</p></div>
+                <div style="background: #e6faf5"><span class="tag">Step 02</span><p>Scarica l’app per confermare il tuo appuntamento</p></div>
+                <div style="background: #e6faf5"><span class="tag">Step 03</span><p>Parla con un nostro esperto e scopri il percorso più adatto a te</p></div>
+              </div>
+              <div class="bw-form"><span style="background: #f4f4f6">Nome</span><span style="background: #f4f4f6">Cognome</span><span style="background: #f4f4f6">Data e ora</span><span style="background: #f4f4f6">Slot orario</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feat white flip">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">App</span><span class="pill">Onboarding</span></div>
+          <h2>Onboarding around four values</h2>
+          <p>Simplicity, personalisation, a trust-based relationship and excellence: the onboarding tells the service promise in four short screens, then leads people to sign in and pick up the appointment they booked on the website.</p>
+        </div>
+        <div class="yh-vis three rv-s" role="img" aria-label="App onboarding, welcome and sign-in screens">
+          <div class="ph"><div class="ps dark">
+            <img class="photo" src="yh-onboarding.jpg" alt="">
+            <div class="sp"></div>
+            <p class="h">Semplicità</p>
+            <p class="b">Semplifica l’esperienza sanitaria dando la possibilità di accedere più facilmente al proprio percorso di cure.</p>
+            <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
+            <span class="btn">Avanti</span>
+          </div></div>
+          <div class="ph"><div class="ps dark">
+            <div class="sp"></div>
+            <img class="yh-ph-logo" src="yh-logo-cream.svg" alt="" style="margin-bottom: 22px">
+            <p class="h" style="font-size: 26px; font-weight: 600">Ciao, benvenuto in Youhealthy</p>
+            <div class="sp"></div>
+            <span class="btn y">Accedi</span>
+            <p class="b" style="text-align: center; margin-top: 12px">Non sei ancora un utente? <b>Registrati</b></p>
+          </div></div>
+          <div class="ph"><div class="ps">
+            <p class="h" style="margin-top: 40px">Accedi</p>
+            <p class="b" style="margin-bottom: 22px">Non sei ancora un utente? <b>Registrati</b></p>
+            <div class="field f">mario.rossi@email.it</div>
+            <div class="field f">••••••••••</div>
+            <p class="b" style="font-weight: 700">Password dimenticata?</p>
+            <div class="sp"></div>
+            <span class="btn">Accedi</span>
+          </div></div>
+        </div>
+      </section>
+
+      <section class="feat mint">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">App</span><span class="pill">Teleconsultation</span></div>
+          <h2>From first access to the video call</h2>
+          <p>On first access the home shows the upcoming appointment to confirm. The consultation happens by video call inside the app, and right after it people know what happens next and who they talked to.</p>
+        </div>
+        <div class="yh-vis three rv-s" role="img" aria-label="App home with the next appointment, video call and post-call screens">
+          <div class="ph"><div class="ps mint">
+            <p class="b">Benvenuto,</p>
+            <p class="h" style="font-size: 17px">Mario</p>
+            <p class="k" style="margin-top: 8px">Prossimi appuntamenti</p>
+            <div class="card">
+              <div class="who"><img src="yh-doctor.jpg" alt=""><div><p class="b" style="font-weight: 700">Assistente sanitario</p><p class="b">Youhealthy</p></div></div>
+              <p class="k" style="margin: 0 0 2px">Data e ora</p>
+              <p class="b" style="margin-bottom: 10px">12/01 alle 11:30–12:30</p>
+              <div class="row"><span class="btn ghost">Modifica</span><span class="btn">Conferma</span></div>
+            </div>
+            <p class="k">Articoli e consigli</p>
+            <div class="card" style="margin: 0"><span class="tag">Consigli</span><p class="b" style="font-weight: 700; margin-top: 4px">Tutti gli esercizi per migliorare la gambata a dorso</p></div>
+          </div></div>
+          <div class="ph"><div class="ps" style="padding: 0">
+            <img class="video" src="yh-doctor.jpg" alt="">
+            <span class="timer">00:12:56</span>
+            <span class="pip"></span>
+            <div class="callbar"><i></i><i class="end"></i><i></i></div>
+          </div></div>
+          <div class="ph"><div class="ps">
+            <p class="h" style="margin-top: 30px">Appuntamento terminato</p>
+            <p class="b" style="font-weight: 700; margin-bottom: 4px">Cosa succede adesso?</p>
+            <p class="b">Torneremo da te entro 24 ore per sottoporti il percorso più adatto rispetto a quanto emerso durante il tuo appuntamento.</p>
+            <p class="k" style="margin-top: 18px">Hai svolto l’appuntamento con:</p>
+            <div class="who"><img src="yh-doctor.jpg" alt=""><div><p class="b" style="font-weight: 700">Assistente sanitario</p><p class="b">Youhealthy</p></div></div>
+            <div class="sp"></div>
+            <span class="btn">Torna in Homepage</span>
+          </div></div>
+        </div>
+      </section>
+
+      <section class="feat white flip">
+        <div class="ftext rv-l">
+          <div class="pills"><span class="pill">App</span><span class="pill">Profiling</span></div>
+          <h2>Your lifestyle, step by step</h2>
+          <p>Profiling builds each person’s Healthy Book. People can proceed on their own or with their health assistant, answering one short question at a time about activity, nutrition, sleep and health goals.</p>
+        </div>
+        <div class="yh-vis three rv-s" role="img" aria-label="Health profiling screens: activity level, nutrition and health goals">
+          <div class="ph"><div class="ps">
+            <div class="prog"><i style="width: 25%"></i></div>
+            <p class="k">Stile di vita</p>
+            <p class="h" style="font-size: 17px">Adesso raccontaci il tuo stile di vita. Quanto sei attivo?</p>
+            <div class="sp"></div>
+            <div class="opt">Molto poco, sono sedentario</div>
+            <div class="opt">Abbastanza ma non uno sportivo</div>
+            <div class="opt on">Mi alleno settimanalmente</div>
+            <div class="opt">Sono un atleta agonista</div>
+            <div class="row" style="margin-top: 6px"><span class="btn ghost">Salta</span><span class="btn">Procedi</span></div>
+          </div></div>
+          <div class="ph"><div class="ps">
+            <div class="prog"><i style="width: 45%"></i></div>
+            <p class="k">Stile di vita</p>
+            <p class="h" style="font-size: 17px">Ottimo, per quanto riguarda la tua alimentazione come la definiresti?</p>
+            <div class="sp"></div>
+            <p class="k" style="margin: 0">Tipologia alimentazione</p>
+            <div class="slider"></div>
+            <div style="display: flex; justify-content: space-between" class="b"><span>Non sana</span><span>Sana</span></div>
+            <div class="sp"></div>
+            <div class="row"><span class="btn ghost">Salta</span><span class="btn">Procedi</span></div>
+          </div></div>
+          <div class="ph"><div class="ps">
+            <div class="prog"><i style="width: 85%"></i></div>
+            <p class="k">Obiettivi di salute</p>
+            <p class="h" style="font-size: 17px">Quali sono i tuoi obiettivi di salute?</p>
+            <p class="b" style="margin-bottom: 14px">Seleziona da 1 a 4 obiettivi</p>
+            <div class="goal"><span class="on">Energia</span><span>Sonno</span><span class="on">Forma fisica</span><span>Alimentazione</span><span>Stress</span><span>Prevenzione</span></div>
+            <div class="sp"></div>
+            <div class="row"><span class="btn ghost">Salta</span><span class="btn">Procedi</span></div>
+          </div></div>
+        </div>
+      </section>
+
+      <section class="wrap next">
         <a class="nextlink" href="#unicredit" data-nav="uc">
           <span><span class="eyebrow" style="display: block; margin-bottom: 16px">Next project</span><span class="t">Concept Project for Unicredit app</span></span>
           <span class="arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
@@ -691,7 +1006,7 @@ How do you prefer to manage your account? Which are your most frequent actions? 
 </div>
 <script>
 (function () {
-  var routes = { home: 'home', about: 'about', uc: 'unicredit', solar: 'solar', ill: 'illustrations' };
+  var routes = { home: 'home', about: 'about', yh: 'youhealthy', uc: 'unicredit', solar: 'solar', ill: 'illustrations' };
   var pages = document.querySelectorAll('[data-page]');
   var curtain = document.querySelector('.curtain-in');
   var current = null, busy = false;
@@ -703,7 +1018,7 @@ How do you prefer to manage your account? Which are your most frequent actions? 
     return { page: 'home' };
   }
   function setActive(page) {
-    var map = { home: page === 'home', work: ['unicredit', 'solar', 'illustrations'].indexOf(page) > -1, about: page === 'about' };
+    var map = { home: page === 'home', work: ['youhealthy', 'unicredit', 'solar', 'illustrations'].indexOf(page) > -1, about: page === 'about' };
     document.querySelectorAll('[data-on]').forEach(function (a) { a.classList.toggle('on', !!map[a.getAttribute('data-on')]); });
   }
   function scrollToAnchor(anchor, smooth) {
@@ -715,7 +1030,7 @@ How do you prefer to manage your account? Which are your most frequent actions? 
     pages.forEach(function (p) { p.hidden = p.getAttribute('data-page') !== page; });
     current = page;
     setActive(page);
-    var titles = { home: 'Matteo De Santis — Portfolio', about: 'About — Matteo De Santis', unicredit: 'Concept Project for Unicredit app — Matteo De Santis', solar: 'Brand Refresh & UX/UI — Matteo De Santis', illustrations: 'Illustrations — Matteo De Santis' };
+    var titles = { home: 'Matteo De Santis — Portfolio', about: 'About — Matteo De Santis', youhealthy: 'YouHealthy — Matteo De Santis', unicredit: 'Concept Project for Unicredit app — Matteo De Santis', solar: 'Brand Refresh & UX/UI — Matteo De Santis', illustrations: 'Illustrations — Matteo De Santis' };
     document.title = titles[page];
     window.scrollTo(0, 0);
     document.querySelectorAll('[data-page="' + page + '"] video').forEach(function (v) { v.muted = true; var p = v.play(); if (p && p.catch) p.catch(function () {}); });
